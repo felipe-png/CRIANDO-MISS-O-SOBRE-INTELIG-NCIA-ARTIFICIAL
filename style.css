@@ -1,43 +1,78 @@
-:root{
-    --cor-fundo: #01080E ;
-    --cor-principal: #0B0D20 ;
-    --cor-secundaria: #212333; 
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
 
+/* Variáveis de Cores */
+:root {
+    --corfundo: #1A1A2E;
+    --corprincipal: #16213E;
+    --corsecundaria: #0F3460;
+    --cordestaque: #E94560;
+    --cortexto: #E0E0E0;
 }
 
+/* Estilo do Corpo */
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
+    font-family: 'Roboto', sans-serif; /* Nova fonte */
+    background-color: var(--corfundo);
+    color: var(--cortexto);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
 }
 
-.caixa-principal{
-    background-color: var(--cor-principal);
+/* Contêiner Principal */
+.caixaprincipal {
+    background-color: var(--corprincipal);
     width: 90%;
     max-width: 600px;
     text-align: center;
-    padding: 20px;
+    padding: 25px; /* Aumento do padding */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra sutil */
 }
 
-h1{
-    color: var(--cor-destaque);
+/* Títulos */
+h1 {
+    color: var(--cordestaque);
+    margin-bottom: 20px;
 }
 
+/* Botões */
 button {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
+    background-color: var(--corsecundaria);
+    color: var(--cortexto);
     border: none;
-    border-radius: 15px;
-    padding: 15px;
-    transition: background-color 0.3s;
+    border-radius: 25px; /* Mais arredondado */
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 5px;
 }
 
-button:hover{
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
+button:hover {
+    background-color: var(--cordestaque);
+    color: var(--corprincipal);
 }
+
+/* Campo de entrada de texto (se houver) */
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--corsecundaria);
+    background-color: var(--corfundo);
+    color: var(--cortexto);
+}
+
+/* Links (se houver) */
+a {
+    color: var(--cordestaque);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
